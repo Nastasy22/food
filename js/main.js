@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-
     // Tabs <--start
     const tabsParent = document.querySelector('.tabheader__items'),
         tabs = document.querySelectorAll('.tabheader__item'),
@@ -41,7 +40,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // Tabs <--end
 
     // Timer <--start
-    const deadline = '2021-07-27';
+    let today = new Date();
+    let deadline = new Date();
+    deadline.setDate(today.getDate()+7);
+    deadline = deadline.toISOString().slice(0, 10);
 
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - Date.parse(new Date()),
