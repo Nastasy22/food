@@ -1,4 +1,4 @@
-function timer() {
+function timer(id) {
     // Timer <--start
     let today = new Date();
     let deadline = new Date();
@@ -52,8 +52,8 @@ function timer() {
             }
         }
     }
-    setClock('.timer', deadline);
+    setClock(id, deadline);
     // Timer <--end
 }
 
-module.exports = timer;
+export default timer;

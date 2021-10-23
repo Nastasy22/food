@@ -108,4 +108,4 @@ function calc() {
     // Calculator <--end
 }
 
-module.exports = calc;
+export default calc;
